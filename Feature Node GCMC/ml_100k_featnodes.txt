@@ -1,0 +1,20 @@
+2025-08-14 21:39:30.122079: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1755207570.160842    7012 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1755207570.168690    7012 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1755207570.190926    7012 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1755207570.191258    7012 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1755207570.191368    7012 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1755207570.191432    7012 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-08-14 21:39:30.198514: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From /usr/local/lib/python3.11/dist-packages/tensorflow/python/compat/v2_compat.py:98: disable_resource_variables (from tensorflow.python.ops.resource_variables_toggle) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+usage: train-6.py [-h] [-d {ml_100k,ml_1m,ml_10m,douban,yahoo_music,flixster}]
+                  [-lr LEARNING_RATE] [-e EPOCHS] [-hi HIDDEN HIDDEN]
+                  [-fhi FEAT_HIDDEN] [-ac {sum,stack}] [-do DROPOUT]
+                  [-nb NUM_BASIS_FUNCTIONS] [-ds DATA_SEED]
+                  [-sdir SUMMARIES_DIR] [-nsym | -nleft] [-f | -no_f]
+                  [-ws | -no_ws] [-t | -v]
+train-6.py: error: unrecognized arguments: -n -p 0.7 -b 2 0.2

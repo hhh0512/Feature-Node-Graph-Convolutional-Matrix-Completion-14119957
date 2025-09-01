@@ -1,0 +1,2 @@
+model_checkpoint_path: "recommenderfeatnodegae.ckpt-1000"
+all_model_checkpoint_paths: "recommenderfeatnodegae.ckpt-1000"

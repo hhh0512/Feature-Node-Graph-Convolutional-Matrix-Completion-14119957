@@ -1,0 +1,31 @@
+2025-08-26 03:01:31.663992: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1756177291.689409    5701 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1756177291.697277    5701 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1756177291.715691    5701 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1756177291.715981    5701 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1756177291.716062    5701 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1756177291.716124    5701 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-08-26 03:01:31.721623: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From /usr/local/lib/python3.12/dist-packages/tensorflow/python/compat/v2_compat.py:98: disable_resource_variables (from tensorflow.python.ops.resource_variables_toggle) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+Settings:
+{'dataset': 'ml_1m', 'learning_rate': 0.01, 'epochs': 1000, 'hidden': [500, 75], 'feat_hidden': 64, 'accumulation': 'stack', 'dropout': 0.7, 'num_basis_functions': 2, 'data_seed': 1234, 'summaries_dir': 'logs/2025-08-26_03:01:37.403958', 'norm_symmetric': False, 'features': False, 'write_summary': False, 'testing': True} 
+
+Using random dataset split ...
+datasplit_path = data/ml_1m/split_seed1234.pickle
+Reading dataset splits from file...
+Number of users = 6040
+Number of items = 3706
+Number of links = 1000209
+Fraction of positive links = 0.0447
+Traceback (most recent call last):
+  File "/content/drive/MyDrive/master project/train.py", line 167, in <module>
+    test_u_indices, test_v_indices, class_values, v_dict = create_trainvaltest_split(DATASET, DATASEED, TESTING,
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/drive/MyDrive/master project/gcmc/preprocessing.py", line 200, in create_trainvaltest_split
+    val_labels, u_val_idx, v_val_idx, test_labels, u_test_idx, v_test_idx, class_values, v_dict
+                                                                                         ^^^^^^
+UnboundLocalError: cannot access local variable 'v_dict' where it is not associated with a value
